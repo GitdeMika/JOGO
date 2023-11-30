@@ -1,0 +1,133 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    display: block;
+    width: 100%;
+    height: 650px;
+    border-bottom: 30px solid rgb(30, 190, 30);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87cee8,#e0feff);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario {
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+}
+
+.clouds {
+    position: absolute;
+    width: 330px;
+    height: 195px;
+    border-bottom: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+    animation: clouds-animation 20s infinite linear;
+}
+
+.jump{
+    animation: jump-animation 500ms infinite ease-out;
+}
+
+.play{
+    width: 100%;
+    height: 650px;
+    border-bottom: 30px solid rgb(30, 190, 30);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87cee8,#e0feff);
+}
+
+.game-over{
+    display: none;
+    width: 100%;
+    height: 650px;
+    border-bottom: 30px solid rgb(30, 190, 30);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87cee8,#e0feff);
+}
+
+.startbutton{
+    width: 10%;
+    height: 35px;
+    margin-left: 46%;
+    margin-top: 25%;
+    letter-spacing: 1.5px;
+    font-weight: 100;
+    font-family:fantasy;
+    color: rgb(255, 255, 255);
+    font-style: initial;
+    background-color: rgb(7, 145, 127);
+    border-color: rgb(7, 80, 70);
+}
+
+.restartbutton{
+    display: block;
+    width: 280%;
+    height: 35px;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 590%;
+    letter-spacing: 1.5px;
+    font-weight: 100;
+    font-family:fantasy;
+    color: rgb(255, 255, 255);
+    font-style: initial;
+    background-color: rgb(231, 32, 25);;
+    border-color: rgb(145, 12, 7);
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump-animation {
+    0% {
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -200px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
